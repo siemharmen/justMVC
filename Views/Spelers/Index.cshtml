@@ -1,0 +1,50 @@
+﻿@model ReversiMVC.ViewModels.ViewListSpelers
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Naam
+            </th>
+            <th>
+                AantalGewonnen
+            </th>
+            <th>
+                AantalVerloren
+            </th>
+            <th>
+                AantalGelijk
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Spelers)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Naam)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AantalGewonnen)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AantalVerloren)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AantalGelijk)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<script>
+    var user = document.getElementById("messageInput").value;
+ 
+</script>
